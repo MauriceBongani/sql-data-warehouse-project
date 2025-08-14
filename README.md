@@ -1,31 +1,45 @@
-# Data Warehouse & Analytics Project (SQL Server)
+
+# Data Warehouse & Analytics Project (PostgreSQL)
 
 ## 📌 Overview
-This project demonstrates the design and implementation of a **Data Warehouse** and analytical workflows using **SQL Server**.  
-It covers the process from **data extraction** to **transformation** and **loading (ETL)**, followed by creating analytical queries for business insights.
+This project demonstrates the design and implementation of a Data Warehouse and analytical workflows using PostgreSQL.
+It covers the process from data extraction to transformation and loading (ETL), followed by creating analytical queries for business insights.
 
 ## 🎯 Objectives
-- Design a **data warehouse schema** (Star/Snowflake schema).
-- Integrate data from multiple sources.
-- Implement ETL processes.
-- Perform advanced analytics with SQL Server.
+- Design a data warehouse schema (Star or Snowflake schema).
+
+- Integrate data from multiple sources (CSV, Excel, or external databases).
+
+- Implement ETL processes directly in PostgreSQL using SQL and scripts.
+
+- Perform advanced analytics with PostgreSQL functions and window queries.
 
 ## 🛠️ Tools & Technologies
-- **SQL Server** (Database & ETL using SQL Server Integration Services - SSIS)
-- **SQL** (DDL, DML, Analytical Queries)
-- **Excel / CSV** (Data Sources)
-- **Power BI** (Optional visualization)
+- PostgreSQL (Database & ETL using COPY and SQL scripts)
+
+- SQL (DDL, DML, Analytical Queries)
+
+- CSV / Excel (Source data)
+
+- Power BI / Tableau (Optional visualization)
 
 ## 🚀 Features
-- **Dimensional Modeling** (Star schema with Fact and Dimension tables)
-- **ETL Pipeline** to clean and load data
-- **Aggregated Reports** for KPIs
-- **Sample Analytical Queries** (Trends, comparisons, rankings)
+- Dimensional Modeling (Star schema with Fact and Dimension tables)
 
-## 📊 Example Queries
+- ETL Pipeline to clean, transform, and load data into warehouse tables
+
+- Aggregated Reports for KPIs
+
+- Sample Analytical Queries (Trends, comparisons, rankings, growth analysis)
+
+ ## 📊 Example Queries
 - Top 10 products by sales
+
 - Year-over-year revenue growth
+
 - Regional sales performance
+
+- Customer purchase frequency
 
 ## 📦 How to Use
 1. Clone this repository:
@@ -41,5 +55,4 @@ It covers the process from **data extraction** to **transformation** and **loadi
 This project is licensed under the MIT License.
 
 ---
-
 
