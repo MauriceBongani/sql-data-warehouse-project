@@ -1,43 +1,36 @@
 /*
 ===================================================================
-CREATE DATABASE and SCHEMA
+CREATE DATABASE and SCHEMA (PostgreSQL)
 ===================================================================
 Script Purpose:
 This script creates a new database 'DataWarehouse' after checking if it already exists.
-If the database 'DataWarehouse exists', it is dropped and recreated. Adsitionally, the
-script sets uo three schemas within the database: 'bronze', 'silver' and 'gold'.
+If the database 'DataWarehouse' exists, it is dropped and recreated. Additionally, the
+script sets up three schemas within the database: 'bronze', 'silver', and 'gold'.
 
 WARNING:
-This script drops the entire 'Datawarehouse' database if it exixts. All the data
-in the database will be permanently deleted. Proceed with caution and makesure you have a 
-backup before running thus script.
-
+This script drops the entire 'DataWarehouse' database if it exists.
+All data in the database will be permanently deleted. 
+Proceed with caution and ensure you have a backup before running this script.
 */
 
-use master;
-GO
-
---Drop and recreate the database 'Datawarehouse'
-IF EXISTS (SELECT 1 FORM sys.databases WHERE name = 'DataWarehouse')
+-- 1. Terminate connections to the database (if exists) and drop it
+DO $$
 BEGIN
-	ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-	DROP DATABASE DataWarehouse;
-END;
-GO
+   IF EXISTS (SELECT 1 FROM pg_database WHERE datname = 'datawarehouse') THEN
+      PERFORM pg_terminate_backend(pid)
+      FROM pg_stat_activity
+      WHERE datname = 'datawarehouse';
+      EXECUTE 'DROP DATABASE datawarehouse';
+   END IF;
+END$$;
 
--- CREATE DATABASE DataWarehouse
-CREATE DATABASE DataWarehouse;
-GO 
+-- 2. Create the database
+CREATE DATABASE datawarehouse;
 
-USE DataWarehouse;
-GO
+-- 3. Connect to the new database (in psql or your tool, run: \c datawarehouse)
 
---Create Schema
+-- 4. Create schemas
 CREATE SCHEMA bronze;
-GO
-
 CREATE SCHEMA silver;
-GO
-
 CREATE SCHEMA gold;
-GO
+
