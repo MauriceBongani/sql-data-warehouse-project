@@ -1,4 +1,4 @@
-
+<img width="1027" height="523" alt="data flow digram" src="https://github.com/user-attachments/assets/1eceff13-f749-4452-933c-4ba2a7e1bcff" />
 # Data Warehouse & Analytics Project (PostgreSQL)
 
 ## 📌 Overview
@@ -13,6 +13,8 @@ It covers the process from data extraction to transformation and loading (ETL), 
 - Implement ETL processes directly in PostgreSQL using SQL and scripts.
 
 - Perform advanced analytics with PostgreSQL functions and window queries.
+  
+<img width="1027" height="523" alt="data flow digram" src="https://github.com/user-attachments/assets/c2f21394-9210-4839-bc79-f148a105dbfc" />
 
 ## 🛠️ Tools & Technologies
 - PostgreSQL (Database & ETL using COPY and SQL scripts)
